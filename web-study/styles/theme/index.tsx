@@ -14,13 +14,19 @@ export const theme = createTheme({
         }
     },
     palette: {
-        action: {
-            active: '#6B7280',
-            focus: 'rgba(55, 65, 81, 0.12)',
-            hover: 'rgba(55, 65, 81, 0.04)',
-            selected: 'rgba(55, 65, 81, 0.08)',
-            disabledBackground: 'rgba(55, 65, 81, 0.12)',
-            disabled: 'rgba(55, 65, 81, 0.26)'
+        // action: {
+        //     active: '#6B7280',
+        //     focus: 'rgba(55, 65, 81, 0.12)',
+        //     hover: 'Black',
+        //     selected: 'rgba(55, 65, 81, 0.08)',
+        //     disabledBackground: 'rgba(55, 65, 81, 0.12)',
+        //     disabled: 'rgba(55, 65, 81, 0.26)'
+        // },
+        primary: {
+          main: '#285943',
+          light: '#D7FFF1',
+          dark: '#285943',
+          contrastText: '#77AF9C'
         }
     }
 })

@@ -1,36 +1,88 @@
 import React from 'react'
 import Head from 'next/head';
-import { Box, Button } from '@mui/material';
+import NextLink from 'next/link';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Login = () => {
   return (
     <>
-        <Head>
-            <title>WebStudy-LoginPage</title>
-        </Head>
-
-        <Box
-        component="main"
+      <Head>
+        <title>로그인 | 포트폴리오</title>
+      </Head>
+        <Grid 
+        container
+        spacing={3}
         sx={{
-            alignItems: 'center',
-            display: 'flex',
-            minHeight: '100%'
+          p: 2, border: '1px dashed grey'
         }}
+        // justifyContent="center"
+        // alignItems="center"
         >
- 
-        </Box>
-
-        <Container>
-        <Button
-              component="a"
-              startIcon={<ArrowBackIcon fontSize="small" />}
-        >
-                testee
-        </Button>
-        </Container>
-            
+          <Grid container item >
+            <Grid xs={12}>
+              <NextLink
+                href="/"
+                passHref>
+                <Button
+                  component="a"
+                  startIcon={<ArrowBackIcon fontSize="small" />}>
+                  홈
+                </Button>
+              </NextLink>
+            </Grid>
+          </Grid>
+          <Grid container item> 
+            <Grid xs={12}>
+              <Typography 
+              variant="h4"
+              color="primary">
+                안녕하세요.
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid  xs={8}>
+              <TextField 
+              id="outlined-basic" 
+              label="이메일" 
+              variant="outlined" 
+              fullWidth/>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              <TextField 
+              id="outlined-basic" 
+              label="비밀번호" 
+              variant="outlined" 
+              fullWidth/>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              <Button
+              color="primary"
+              fullWidth
+              size="large"
+              type="submit"
+              variant="contained">
+                로그인
+              </Button>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              회원이 아니신가요?{' '}  
+              <NextLink
+                href="/register"
+              >
+                회원가입
+              </NextLink>
+            </Grid>
+          </Grid>
+      </Grid>
     </>
   )
 }
