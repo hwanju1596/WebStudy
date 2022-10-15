@@ -9,7 +9,7 @@ const Register = () => {
     return (
         <>
           <Head>
-            <title>Register | PortFolio</title>
+            <title>회원가입 | 포트폴리오</title>
           </Head>
           <Stack   
             direction="column"
@@ -59,7 +59,6 @@ const Register = () => {
                 회원가입
             </Button>
           </Stack>
-          
         </>
     );
 }

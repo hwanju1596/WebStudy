@@ -78,7 +78,7 @@ const Login = () => {
               <NextLink
                 href="/register"
               >
-                Sign Up
+                회원가입
               </NextLink>
             </Grid>
           </Grid>
