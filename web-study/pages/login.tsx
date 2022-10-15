@@ -9,23 +9,26 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>Login | PortFolio</title>
+        <title>로그인 | 포트폴리오</title>
       </Head>
         <Grid 
         container
         spacing={3}
+        sx={{
+          p: 2, border: '1px dashed grey'
+        }}
         // justifyContent="center"
         // alignItems="center"
         >
-          <Grid container item>
+          <Grid container item >
             <Grid xs={12}>
               <NextLink
-                href="/login"
+                href="/"
                 passHref>
                 <Button
                   component="a"
                   startIcon={<ArrowBackIcon fontSize="small" />}>
-                  Home Page
+                  홈
                 </Button>
               </NextLink>
             </Grid>
@@ -35,7 +38,7 @@ const Login = () => {
               <Typography 
               variant="h4"
               color="primary">
-                Hello
+                안녕하세요.
               </Typography>
             </Grid>
           </Grid>
@@ -43,7 +46,7 @@ const Login = () => {
             <Grid  xs={8}>
               <TextField 
               id="outlined-basic" 
-              label="Email Address" 
+              label="이메일" 
               variant="outlined" 
               fullWidth/>
             </Grid>
@@ -52,7 +55,7 @@ const Login = () => {
             <Grid xs={8}>
               <TextField 
               id="outlined-basic" 
-              label="Password" 
+              label="비밀번호" 
               variant="outlined" 
               fullWidth/>
             </Grid>
@@ -65,8 +68,18 @@ const Login = () => {
               size="large"
               type="submit"
               variant="contained">
-                Sing In
+                로그인
               </Button>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              회원이 아니신가요?{' '}  
+              <NextLink
+                href="/register"
+              >
+                Sign Up
+              </NextLink>
             </Grid>
           </Grid>
       </Grid>
