@@ -1,36 +1,75 @@
 import React from 'react'
 import Head from 'next/head';
-import { Box, Button } from '@mui/material';
+import NextLink from 'next/link';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const Login = () => {
   return (
     <>
-        <Head>
-            <title>WebStudy-LoginPage</title>
-        </Head>
-
-        <Box
-        component="main"
-        sx={{
-            alignItems: 'center',
-            display: 'flex',
-            minHeight: '100%'
-        }}
+      <Head>
+        <title>Login | PortFolio</title>
+      </Head>
+        <Grid 
+        container
+        spacing={3}
+        // justifyContent="center"
+        // alignItems="center"
         >
- 
-        </Box>
-
-        <Container>
-        <Button
-              component="a"
-              startIcon={<ArrowBackIcon fontSize="small" />}
-        >
-                testee
-        </Button>
-        </Container>
-            
+          <Grid container item>
+            <Grid xs={12}>
+              <NextLink
+                href="/login"
+                passHref>
+                <Button
+                  component="a"
+                  startIcon={<ArrowBackIcon fontSize="small" />}>
+                  Home Page
+                </Button>
+              </NextLink>
+            </Grid>
+          </Grid>
+          <Grid container item> 
+            <Grid xs={12}>
+              <Typography 
+              variant="h4"
+              color="primary">
+                Hello
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid  xs={8}>
+              <TextField 
+              id="outlined-basic" 
+              label="Email Address" 
+              variant="outlined" 
+              fullWidth/>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              <TextField 
+              id="outlined-basic" 
+              label="Password" 
+              variant="outlined" 
+              fullWidth/>
+            </Grid>
+          </Grid>
+          <Grid container item>
+            <Grid xs={8}>
+              <Button
+              color="primary"
+              fullWidth
+              size="large"
+              type="submit"
+              variant="contained">
+                Sing In
+              </Button>
+            </Grid>
+          </Grid>
+      </Grid>
     </>
   )
 }
