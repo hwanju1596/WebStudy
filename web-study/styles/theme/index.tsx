@@ -11,7 +11,23 @@ export const theme = createTheme({
           defaultProps: {
             disableRipple: true
           }
+        },
+      MuiCssBaseline: {
+        styleOverrides: {
+          '*': {
+            boxSizing: 'border-box',
+            margin: 0,
+            padding: 0
+          },
+          body: {
+            display: 'flex',
+            flex: '1 1 auto',
+            flexDirection: 'column',
+            minHeight: '100%',
+            width: '100%'
+          }
         }
+      }
     },
     palette: {
         // action: {

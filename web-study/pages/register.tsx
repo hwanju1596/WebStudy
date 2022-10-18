@@ -6,6 +6,19 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import TextField from '@mui/material/TextField';
 
 const Register = () => {
+    // var { graphql, buildSchema } = require('graphql');
+
+    // var schema = buildSchema(`
+    // type Query {
+    //     hello: String
+    // }
+    // `);
+
+    // var root = { hello: () => 'Hello world!' };
+
+    // graphql(schema, '{ hello }', root).then((response:any) => {
+    // console.log(response);
+    // });
     return (
         <>
           <Head>
