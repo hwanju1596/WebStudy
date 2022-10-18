@@ -11,14 +11,13 @@ const Login = () => {
       <Head>
         <title>로그인 | 포트폴리오</title>
       </Head>
-        <Grid 
-        container
-        spacing={3}
-        sx={{
-          p: 2, border: '1px dashed grey'
-        }}
-        // justifyContent="center"
-        // alignItems="center"
+      <Container maxWidth="sm" sx={{ mt: "10%" }}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            p: 2, border: '1px dashed grey'
+          }}
         >
           <Grid container item >
             <Grid xs={12}>
@@ -33,48 +32,48 @@ const Login = () => {
               </NextLink>
             </Grid>
           </Grid>
-          <Grid container item> 
+          <Grid container item>
             <Grid xs={12}>
-              <Typography 
-              variant="h4"
-              color="primary">
+              <Typography
+                variant="h4"
+                color="primary">
                 안녕하세요.
               </Typography>
             </Grid>
           </Grid>
           <Grid container item>
-            <Grid  xs={8}>
-              <TextField 
-              id="outlined-basic" 
-              label="이메일" 
-              variant="outlined" 
-              fullWidth/>
+            <Grid xs={12}>
+              <TextField
+                id="outlined-basic"
+                label="이메일"
+                variant="outlined"
+                fullWidth />
             </Grid>
           </Grid>
           <Grid container item>
-            <Grid xs={8}>
-              <TextField 
-              id="outlined-basic" 
-              label="비밀번호" 
-              variant="outlined" 
-              fullWidth/>
+            <Grid xs={12}>
+              <TextField
+                id="outlined-basic"
+                label="비밀번호"
+                variant="outlined"
+                fullWidth />
             </Grid>
           </Grid>
           <Grid container item>
-            <Grid xs={8}>
+            <Grid xs={12}>
               <Button
-              color="primary"
-              fullWidth
-              size="large"
-              type="submit"
-              variant="contained">
+                color="primary"
+                fullWidth
+                size="large"
+                type="submit"
+                variant="contained">
                 로그인
               </Button>
             </Grid>
           </Grid>
           <Grid container item>
             <Grid xs={8}>
-              회원이 아니신가요?{' '}  
+              회원이 아니신가요?{' '}
               <NextLink
                 href="/register"
               >
@@ -82,7 +81,8 @@ const Login = () => {
               </NextLink>
             </Grid>
           </Grid>
-      </Grid>
+        </Grid>
+      </Container>
     </>
   )
 }
